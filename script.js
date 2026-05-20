@@ -91,6 +91,7 @@ function loadQuestion(index) {
     `;
 
     card.addEventListener("click", () => {
+        const wasHidden = !answer.revealed;
       answer.revealed = !answer.revealed;
       updateAnswerCard(card, answer, answerIndex);
         // Only play sound when revealing
