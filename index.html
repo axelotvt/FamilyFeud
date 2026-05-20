@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Family Feud</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="top-bar">
+      <button id="loadCsvBtn">Load CSV</button>
+      <input type="file" id="csvInput" accept=".csv" hidden />
+
+      <div class="strike-controls">
+        <button class="strike-btn" data-strike="1">X 1</button>
+        <button class="strike-btn" data-strike="2">X 2</button>
+        <button class="strike-btn" data-strike="3">X 3</button>
+        <button id="clearStrikes">Clear X</button>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <h1 id="questionText">Load a CSV to begin</h1>
+    </div>
+
+    <div id="answersContainer" class="answers-grid"></div>
+
+    <div id="strikeOverlay" class="strike-overlay"></div>
+
+    <div id="tabsContainer" class="tabs"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
