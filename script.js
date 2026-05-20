@@ -93,11 +93,20 @@ function loadQuestion(index) {
     card.addEventListener("click", () => {
       answer.revealed = !answer.revealed;
       updateAnswerCard(card, answer, answerIndex);
+        // Only play sound when revealing
+  if (wasHidden && answer.revealed) {
+
+    correctSound.currentTime = 0;
+    correctSound.play();
+
+  }
+
     });
 
     updateAnswerCard(card, answer, answerIndex);
 
     answersContainer.appendChild(card);
+    
   });
 
   updateTabs();
