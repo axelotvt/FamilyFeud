@@ -175,7 +175,12 @@ document.querySelectorAll(".strike-btn").forEach(btn => {
     strikeOverlay.textContent = "X".repeat(strikeNumber);
 
     strikeOverlay.classList.add("show");
+  
+    // Restart sound if already playing
+    strikeSound.currentTime = 0;
 
+    strikeSound.play();
+    
     setTimeout(() => {
       strikeOverlay.classList.remove("show");
     }, 1200);
